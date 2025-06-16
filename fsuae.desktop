@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Install FS-UAE Emulator
 Comment=Commodore Amiga Emulator
-Exec=gnome-terminal -e "bash -c 'cd \"$(dirname "\"%k\"")\"; sudo bash "./install.sh"'"
+Exec=gnome-terminal -- sh -c 'cd "'"$(dirname %k)"'"; sudo bash ./install.sh'
 Icon=org.gnome.DiskUtility
 Terminal=false
 Type=Application
