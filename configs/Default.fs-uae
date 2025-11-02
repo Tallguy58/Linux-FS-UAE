@@ -37,5 +37,4 @@ uae_floppy3type = 1
 writable_floppy_images = 1
 uae_sound_output = exact
 uae_sound_stereo_separation = 16
-zorro_iii_memory = 131072
-
+zorro_iii_memory = 520192
