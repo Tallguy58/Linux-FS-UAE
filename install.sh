@@ -62,15 +62,17 @@ cp -v -f rom/* /home/$currentuser/Documents/FS-UAE/Kickstarts/
 mkdir -p -v /home/$currentuser/Documents/FS-UAE/Floppies
 cp -v -f adf/*.adf /home/$currentuser/Documents/FS-UAE/Floppies/
 
-echo -e '[Desktop Entry]'>/home/$currentuser/.config/autostart/LaunchAmiga.desktop
-echo -e 'Type=Application'>>/home/$currentuser/.config/autostart/LaunchAmiga.desktop
-echo -e 'Exec=fs-uae'>>/home/$currentuser/.config/autostart/LaunchAmiga.desktop
-echo -e 'X-GNOME-Autostart-enabled=true'>>/home/$currentuser/.config/autostart/LaunchAmiga.desktop
-echo -e 'NoDisplay=false'>>/home/$currentuser/.config/autostart/LaunchAmiga.desktop
-echo -e 'Hidden=false'>>/home/$currentuser/.config/autostart/LaunchAmiga.desktop
-echo -e 'Name[en_AU]=Launch Amiga'>>/home/$currentuser/.config/autostart/LaunchAmiga.desktop
-echo -e 'Comment[en_AU]=Commodore Amiga Emulator'>>/home/$currentuser/.config/autostart/LaunchAmiga.desktop
-echo -e 'X-GNOME-Autostart-Delay=0'>>/home/$currentuser/.config/autostart/LaunchAmiga.desktop
+cat <<'EOF' >/home/$currentuser/.config/autostart/LaunchAmiga.desktop
+[Desktop Entry]
+Type=Application
+Exec=fs-uae
+X-GNOME-Autostart-enabled=true
+NoDisplay=false
+Hidden=false
+Name[en_AU]=Launch Amiga
+Comment[en_AU]=Commodore Amiga Emulator
+X-GNOME-Autostart-Delay=0
+EOF
 
 chmod 0777 -R /home/$currentuser
 
