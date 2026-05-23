@@ -45,6 +45,8 @@ run-in-user-session dconf write /org/cinnamon/desktop/interface/clock-show-date 
 run-in-user-session dconf write /org/cinnamon/desktop/interface/clock-show-seconds "true"
 run-in-user-session dconf write /org/cinnamon/desktop/interface/clock-use-24h "false"
 
+add-apt-repository ppa:fengestad/stable
+apt-get -y update
 apt-get -y install fs-uae
 apt-get -y install fs-uae-launcher
 apt-get -y install fs-uae-arcade
