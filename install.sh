@@ -51,19 +51,17 @@ apt-get -y install fs-uae
 apt-get -y install fs-uae-launcher
 apt-get -y install fs-uae-arcade
 
-mkdir -p -v /home/$currentuser/Documents/FS-UAE/Configurations
-cp -v -f configs/*.fs-uae /home/$currentuser/Documents/FS-UAE/Configurations/
-
-mkdir -p -v /home/$currentuser/Documents/FS-UAE/Hard\ Drives/Work
+mkdir -p /home/$currentuser/Documents/FS-UAE/Hard\ Drives/Work
 rsync -ah --progress wbsystems/* /home/$currentuser/Documents/FS-UAE/Hard\ Drives/Work
 fallocate -l 32G /home/$currentuser/Documents/FS-UAE/Hard\ Drives/system.hdf
 
-mkdir -p -v /home/$currentuser/Documents/FS-UAE/Kickstarts
+mkdir -p /home/$currentuser/Documents/FS-UAE/Kickstarts
 cp -v -f rom/* /home/$currentuser/Documents/FS-UAE/Kickstarts/
 
-mkdir -p -v /home/$currentuser/Documents/FS-UAE/Floppies
+mkdir -p /home/$currentuser/Documents/FS-UAE/Floppies
 cp -v -f adf/*.adf /home/$currentuser/Documents/FS-UAE/Floppies/
 
+mkdir -p /home/$currentuser/.config/autostart
 cat <<'EOF' >/home/$currentuser/.config/autostart/LaunchAmiga.desktop
 [Desktop Entry]
 Type=Application
@@ -76,6 +74,7 @@ Comment[en_AU]=Commodore Amiga Emulator
 X-GNOME-Autostart-Delay=0
 EOF
 
+mkdir -p /home/$currentuser/Documents/FS-UAE/Configurations
 cat <<'EOF' >/home/$currentuser/Documents/FS-UAE/Configurations/Default.fs-uae
 [fs-uae]
 amiga_model = A1200/020
